@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Advanced Calculator</title>
+</head>
+
+<body>
+
+    <form action="#" class="myForm">
+        <table class="calculator" cellspacing="0" cellpadding="1" border="1">
+            <tr>
+                <td colspan="5"><input type="text" name="calculator" maxlength="25" size="28" id="result"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="AC" class="btnClr" onclick="clr()"></td>
+                <td><input type="button" value="DEL" class="del" onclick="deleteChar(this.form.result)"></td>
+                <td><input type="button" value="=" class="btnSol" onclick="solve()"></td>
+                <td><input type="button" value="&#960;" class="btnOp"
+                        onclick="addChar(this.form.result, '3.141592653359')"></td>
+                <td><input type="button" value="&#8731;" class="btnOp"
+                        onclick="if(checkNum(this.form.result.value)){ cbrt(this.form) }"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="btnNum" onclick="d('7')"></td>
+                <td><input type="button" value="8" class="btnNum" onclick="d('8')"></td>
+                <td><input type="button" value="9" class="btnNum" onclick="d('9')"></td>
+                <td><input type="button" value="x&#94;" class="btnOp"
+                        onclick="if(checkNum(this.form.result.value)) { exp(this.form) }"></td>
+                <td><input type="button" value="/" class="btnOp" onclick="d('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="btnNum" onclick="d('4')"></td>
+                <td><input type="button" value="5" class="btnNum" onclick="d('5')"></td>
+                <td><input type="button" value="6" class="btnNum" onclick="d('6')"></td>
+                <td><input type="button" value="ln" class="btnOp"
+                        onclick="if(checkNum(this.form.result.value)){ ln(this.form) }"></td>
+                <td><input type="button" value="*" class="btnOp" onclick="d('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="btnNum" onclick="d('1')"></td>
+                <td><input type="button" value="2" class="btnNum" onclick="d('2')"></td>
+                <td><input type="button" value="3" class="btnNum" onclick="d('3')"></td>
+                <td><input type="button" value="&radic;" class="btnOp"
+                        onclick="if(checkNum(this.form.result.value)) { sqrt(this.form) }"></td>
+                <td><input type="button" value="-" class="btnOp" onclick="d('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="&#177" class="btnOp" onclick="changeSign(this.form.result)"></td>
+                <td><input type="button" value="0" class="btnNum" onclick="d('0')"></td>
+                <td><input type="button" value="&#46;" class="btnOp" onclick="addChar(this.form.result, '&#46;')"></td>
+                <td><input type="button" value="x&#50;" class="btnOp"
+                        onclick="if(checkNum(this.form.result.value)) { square(this.form) }"></td>
+                <td><input type="button" value="+" class="btnOp" onclick="d('+')"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
